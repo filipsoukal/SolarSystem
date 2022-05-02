@@ -9,8 +9,8 @@ using Xamarin.Forms.Xaml;
 
 namespace SolarSystem {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class StarPage : ContentPage {
-		public StarPage() {
+	public partial class Moonpage : ContentPage {
+		public Moonpage() {
 			InitializeComponent();
 		}
 	}
