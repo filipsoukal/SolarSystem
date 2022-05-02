@@ -3,26 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:views="clr-namespace:SolarSystem"
              x:Class="SolarSystem.ShellPage">
-    
     <Shell.FlyoutHeader>
         <Frame>
             <View/>
         </Frame>
     </Shell.FlyoutHeader>
-    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
-        <Tab Title="Tata" Icon="icon_t.png">
-            <ShellContent Title="Planets">
-                    <views:PlanetsPage/>
-            </ShellContent>
-            <ShellContent Title="Stars">
-                <views:StarPage/>
-            </ShellContent>
-            <ShellContent Title="Asteroids">
+
+        <FlyoutItem>
+        <Tab>
+            <ShellContent Title = "Položka 1">
                 <views:AsteroidPage/>
             </ShellContent>
+            <ShellContent Title = "Položka 1">
+                <views:StarPage/>
+            </ShellContent>
         </Tab>
-        
+       
     </FlyoutItem>
-    
-
 </Shell>
