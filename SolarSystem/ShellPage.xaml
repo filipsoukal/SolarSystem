@@ -5,15 +5,19 @@
              x:Class="SolarSystem.ShellPage">
     <FlyoutItem>
         <Tab>
+            <ShellContent Title = "Solar System">
+                <views:SolarSystemPage />
+            </ShellContent>
             <ShellContent Title = "Planets">
                 <views:PlanetsPage/>
             </ShellContent>
-            <ShellContent Title = "Asteroids">
+            <ShellContent Title = "Moons">
                 <views:Moonpage/>
             </ShellContent>
             <ShellContent Title = "Stars">
                 <views:Moonpage/>
             </ShellContent>
+            
         </Tab>
        
     </FlyoutItem>
