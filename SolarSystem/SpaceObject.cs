@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace SolarSystem {
-	class SpaceObject {
+	public class SpaceObject {
 		public SpaceObject(string name, double size, double velocity, double tempature ) {
 			Name = name;
 			Size = size;

@@ -7,7 +7,7 @@ namespace SolarSystem {
 		public App() {
 			InitializeComponent();
 
-			MainPage = new ShellPage();
+			MainPage = new PlanetsPage();
 		}
 
 		protected override void OnStart() {

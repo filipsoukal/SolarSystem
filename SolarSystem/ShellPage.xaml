@@ -4,13 +4,14 @@
              xmlns:views="clr-namespace:SolarSystem.Views"
              xmlns:controls="clr-namespace:SolarSystem.Controls"
              x:Class="SolarSystem.ShellPage">
-    <Shell.FlyoutHeader>
+    
+    <!--<Shell.FlyoutHeader>
         <Frame>
             <View/>
         </Frame>
     </Shell.FlyoutHeader>
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
-        <!--<Tab Title="Tata" Icon="icon_t.png">
+        <Tab Title="Tata" Icon="icon_t.png">
             <ShellContent 
                 Title="Tata Nexon" Icon="icon_t.png"
                 ContentTemplate="{DataTemplate views:TataNexon}"/>
@@ -23,7 +24,8 @@
         <ShellContent Title="Kia" Icon="icon_k.png"
                       ContentTemplate="{DataTemplate views:Kia}"/>
         <ShellContent Title="Honda" Icon="icon_h.png"
-                      ContentTemplate="{DataTemplate views:Honda}"/>-->
-    </FlyoutItem>
+                      ContentTemplate="{DataTemplate views:Honda}"/>
+    </FlyoutItem>-->
     
+
 </Shell>

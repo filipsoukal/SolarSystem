@@ -2,11 +2,28 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SolarSystem.PlanetsPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+    <ListView x:Name="ObjectsList" ItemsSource="{Binding SpaceObjectsList}" IsVisible="true">
+        <!--<ListView.Header>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Add New" Clicked="Button_Clicked"></Button>
+                <Button x:Name="Delete" Text="Delete" Clicked="Delete_Clicked"></Button> 
+            </StackLayout>
+        </ListView.Header>-->
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <!--<ViewCell.ContextActions>
+                        <MenuItem Text="Delete Item" Clicked="MenuItem_Delete" CommandParameter="{Binding .}">
+                        </MenuItem>
+                    </ViewCell.ContextActions>-->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{Binding Name}"></Label> 
+                        <Label Text="{Binding Size}"></Label>
+                        <Label Text="{Binding Velocity}"></Label>
+                        <Label Text="{Binding Tempature}"></Label>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>  
