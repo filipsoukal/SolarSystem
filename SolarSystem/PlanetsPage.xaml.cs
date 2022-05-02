@@ -20,16 +20,16 @@ namespace SolarSystem {
 			InitializeComponent();
 			this.BindingContext = this;
 			SpaceObjectList = new ObservableCollection<SpaceObject>();
-			SpaceObjectList.Add(new SpaceObject("Earth", 5, 7, 6));
-			SpaceObjectList.Add(new SpaceObject("Mars", 9, 5, 4));
-			SpaceObjectList.Add(new SpaceObject("Mercury", 7, 3, 6));
-			SpaceObjectList.Add(new SpaceObject("Venus", 9, 2, 1));
-			SpaceObjectList.Add(new SpaceObject("Moon", 5, 7, 6));
+			SpaceObjectList.Add(new SpaceObject("Earth", 5, 7, 6, SpaceObject.TypeOfObject.planet));
+			SpaceObjectList.Add(new SpaceObject("Mars", 9, 5, 4, SpaceObject.TypeOfObject.planet));
+			SpaceObjectList.Add(new SpaceObject("Mercury", 7, 3, 6, SpaceObject.TypeOfObject.planet));
+			SpaceObjectList.Add(new SpaceObject("Venus", 9, 2, 1, SpaceObject.TypeOfObject.planet));
+			SpaceObjectList.Add(new SpaceObject("Moon", 5, 7, 6, SpaceObject.TypeOfObject.planet));
 			ObjectsList.ItemsSource = SpaceObjectList;
 		}
 
 		private void Button_Clicked(object sender, EventArgs e) {
-			SpaceObjectList.Add(new SpaceObject("Earth", 5, 7, 6));
+			SpaceObjectList.Add(new SpaceObject("Earth", 5, 7, 6, SpaceObject.TypeOfObject.planet));
 		}
 		private void Delete_Clicked(object sender, EventArgs e) {
 			SpaceObjectList.Remove(SpaceObjectList.LastOrDefault());

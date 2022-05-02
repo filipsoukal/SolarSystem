@@ -4,15 +4,14 @@ using System.Text;
 
 namespace SolarSystem {
 	public class Moon : SpaceObject  {
-		public Moon(string name, double size, double velocity, double tempature, PlanetType planettype) : base(name,size,velocity,tempature) {
-			TypeofPlanet = planettype;
+		public Moon(string name, double size, double velocity, double tempature,TypeOfObject objectType, MoonType moontype) : base(name,size,velocity,tempature, objectType) {
+			TypeofMoon = moontype;
 		}
-		public enum PlanetType {
-			GasGiant,
-			Terrestrial,
-			DwarfPlanet,
-			SuperEarth
+		public enum MoonType {
+			Small,
+			Medium,
+			Large
 		}
-		public PlanetType TypeofPlanet { get; set; }
+		public MoonType TypeofMoon { get; set; }
 	}
 }

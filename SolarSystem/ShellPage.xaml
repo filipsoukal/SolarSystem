@@ -9,7 +9,7 @@
                 <views:PlanetsPage/>
             </ShellContent>
             <ShellContent Title = "Asteroids">
-                <views:AsteroidPage/>
+                <views:Moonpage/>
             </ShellContent>
             <ShellContent Title = "Stars">
                 <views:Moonpage/>
