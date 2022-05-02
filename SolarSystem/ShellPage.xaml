@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:SolarSystem.Views"
+             xmlns:controls="clr-namespace:SolarSystem.Controls"
+             x:Class="SolarSystem.ShellPage">
+    <!--<Shell.FlyoutHeader>
+        <controls:FlyoutHeader/>
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutFooter>
+        <controls:FlyoutFooter/>
+    </Shell.FlyoutFooter>-->
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Tata" Icon="icon_t.png">
+            <ShellContent 
+                Title="Tata Nexon" Icon="icon_t.png"
+                ContentTemplate="{DataTemplate views:TataNexon}"/>
+            <ShellContent 
+                Title="Tata Harrier" Icon="icon_t.png"
+                ContentTemplate="{DataTemplate views:TataHarrier}"/>
+        </Tab>
+        <ShellContent Title="Ford" Icon="icon_f.png"
+                      ContentTemplate="{DataTemplate views:Ford}"/>
+        <ShellContent Title="Kia" Icon="icon_k.png"
+                      ContentTemplate="{DataTemplate views:Kia}"/>
+        <ShellContent Title="Honda" Icon="icon_h.png"
+                      ContentTemplate="{DataTemplate views:Honda}"/>
+    </FlyoutItem>
+</Shell>
