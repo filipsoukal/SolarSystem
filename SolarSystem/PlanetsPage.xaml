@@ -3,19 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SolarSystem.PlanetsPage">
     <ListView x:Name="ObjectsList" ItemsSource="{Binding SpaceObjectsList}" IsVisible="true">
-        <!--<ListView.Header>
+        <ListView.Header>
             <StackLayout Orientation="Horizontal">
                 <Button Text="Add New" Clicked="Button_Clicked"></Button>
                 <Button x:Name="Delete" Text="Delete" Clicked="Delete_Clicked"></Button> 
             </StackLayout>
-        </ListView.Header>-->
+        </ListView.Header>
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
-                    <!--<ViewCell.ContextActions>
+                    <ViewCell.ContextActions>
                         <MenuItem Text="Delete Item" Clicked="MenuItem_Delete" CommandParameter="{Binding .}">
                         </MenuItem>
-                    </ViewCell.ContextActions>-->
+                    </ViewCell.ContextActions>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="{Binding Name}"></Label> 
                         <Label Text="{Binding Size}"></Label>

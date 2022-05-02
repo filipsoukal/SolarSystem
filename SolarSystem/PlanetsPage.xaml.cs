@@ -28,15 +28,15 @@ namespace SolarSystem {
 			ObjectsList.ItemsSource = SpaceObjectList;
 		}
 
-		//private void Button_Clicked(object sender, EventArgs e) {
-		//	SpaceObjectList.Add(new SpaceObject("Earth", 5, 7, 6));
-		//}
-		//private void Delete_Clicked(object sender, EventArgs e) {  
-		//	SpaceObjectList.Remove(SpaceObjectList.LastOrDefault());  
-  //      }  
-		//private void MenuItem_Delete(object sender, EventArgs e) {  
-		//	var mi = sender as MenuItem;  
-  //          SpaceObjectList.Remove((SpaceObject)mi.CommandParameter);  
-  //      }  
+		private void Button_Clicked(object sender, EventArgs e) {
+			SpaceObjectList.Add(new SpaceObject("Earth", 5, 7, 6));
+		}
+		private void Delete_Clicked(object sender, EventArgs e) {
+			SpaceObjectList.Remove(SpaceObjectList.LastOrDefault());
+		}
+		private void MenuItem_Delete(object sender, EventArgs e) {
+			var mi = sender as MenuItem;
+			SpaceObjectList.Remove((SpaceObject)mi.CommandParameter);
+		}
 	}
 }
