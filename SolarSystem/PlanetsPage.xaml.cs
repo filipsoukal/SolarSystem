@@ -11,21 +11,21 @@ using Xamarin.Forms.Xaml;
 namespace SolarSystem {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class PlanetsPage : ContentPage {
-		private ObservableCollection<SpaceObject> spaceobjectlist;
-		public ObservableCollection<SpaceObject> SpaceObjectList {
-			get { return spaceobjectlist; }
-			set { spaceobjectlist = value; }
-		}
+		public static ObservableCollection<SpaceObject> PlanetList;
+		//public static ObservableCollection<SpaceObject> SpaceObjectList {
+		//	get { return spaceobjectlist; }
+		//	set { spaceobjectlist = value; }
+		//} 
 		public PlanetsPage() {
 			InitializeComponent();
 			this.BindingContext = this;
-			SpaceObjectList = new ObservableCollection<SpaceObject>();
-			SpaceObjectList.Add(new SpaceObject("Earth", 5, 7, 6, SpaceObject.TypeOfObject.planet));
-			SpaceObjectList.Add(new SpaceObject("Mars", 9, 5, 4, SpaceObject.TypeOfObject.planet));
-			SpaceObjectList.Add(new SpaceObject("Mercury", 7, 3, 6, SpaceObject.TypeOfObject.planet));
-			SpaceObjectList.Add(new SpaceObject("Venus", 9, 2, 1, SpaceObject.TypeOfObject.planet));
-			SpaceObjectList.Add(new SpaceObject("Moon", 5, 7, 6, SpaceObject.TypeOfObject.planet));
-			ObjectsList.ItemsSource = SpaceObjectList;
+			PlanetList = new ObservableCollection<SpaceObject>();
+			PlanetList.Add(new SpaceObject("Earth", 5, 7, 6, SpaceObject.TypeOfObject.planet));
+			PlanetList.Add(new SpaceObject("Mars", 9, 5, 4, SpaceObject.TypeOfObject.planet));
+			PlanetList.Add(new SpaceObject("Mercury", 7, 3, 6, SpaceObject.TypeOfObject.planet));
+			PlanetList.Add(new SpaceObject("Venus", 9, 2, 1, SpaceObject.TypeOfObject.planet));
+			PlanetList.Add(new SpaceObject("Moon", 5, 7, 6, SpaceObject.TypeOfObject.planet));
+			SpaceObjectsListView.ItemsSource = SpaceObjectList;
 		}
 
 		private void Button_Clicked(object sender, EventArgs e) {
@@ -38,11 +38,11 @@ namespace SolarSystem {
 			var mi = sender as MenuItem;
 			SpaceObjectList.Remove((SpaceObject)mi.CommandParameter);
 		}
-		public SpaceObject SelectedItem { get; set; }
+		public SpaceObject SelectedSpaceObject { get; set; }
 		private void PlanetTapped(object sender, ItemTappedEventArgs e)
         {
-            SelectedItem = ObjectsList.SelectedItem as SpaceObject;
-			Deb
+            //SelectedSpaceObject = ObjectsList.SelectedItem as SpaceObject;
+			 DisplayAlert("Učitel", (SpaceObjectsListView.SelectedItem as SpaceObject).Name, "OK");
         }
 	}
 }

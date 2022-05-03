@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SolarSystem.PlanetsPage">
-    <ListView x:Name="ObjectsList" ItemsSource="{Binding SpaceObjectsList}" IsVisible="true">
+    <ListView x:Name="PlanetListView" ItemsSource="{Binding SpaceObjectsList}" IsVisible="true">
         <ListView.Header>
             <StackLayout Orientation="Horizontal">
                 <Button Text="Add New" Clicked="Button_Clicked"></Button>
