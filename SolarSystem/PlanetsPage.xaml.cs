@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
-
+using System.Diagnostics;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -38,5 +38,11 @@ namespace SolarSystem {
 			var mi = sender as MenuItem;
 			SpaceObjectList.Remove((SpaceObject)mi.CommandParameter);
 		}
+		public SpaceObject SelectedItem { get; set; }
+		private void PlanetTapped(object sender, ItemTappedEventArgs e)
+        {
+            SelectedItem = ObjectsList.SelectedItem as SpaceObject;
+			Deb
+        }
 	}
 }
